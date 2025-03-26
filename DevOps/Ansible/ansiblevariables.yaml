@@ -1,0 +1,86 @@
+name: Add a DNS server to resolv.conf
+hosts: localhost
+vars:
+  dns_server: 10.24.15.1
+tasks:
+  -lineinfile:
+    path: /etc/resolv.conf
+    line: 'nameserver {{ dns_server }}'
+
+
+
+#---------------------------------OR--------------------------------
+# move the into the inventory file or create a seperate file for the variables eg - web.yml then add variables in them 
+#----- Inventroy file ------------
+# Web dns_server = 10.24.15.1 
+#---------- web.yml file -----------
+# dns_server: 10.24.15.1
+# then refer the variable in playbook
+name1: Add a DNS server to resolv.conf
+hosts1: localhost
+tasks1:
+  -lineinfile:
+    path: /etc/resolv.conf
+    line: 'nameserver {{ dns_server }}'
+
+
+#------------------------------------- Types of Variables -------------------------------------------------------------------
+
+# 1) String Variable 
+# username: "admin"
+
+# 2) Number Variable
+# max_connection: 100
+
+# 3) Boolean Variable
+# debug_mode: true
+
+# 4) List Variable
+
+# packages:
+  # - nginx
+  # - postgresql
+  # - git
+
+# to refrance normally "{{ packages }}" , to referance a particular value "{{ packages[0] }}"
+
+# 5) Dictionary Variables 
+
+# (user is the dictionary variable)
+
+user:
+  name: "admin"
+  password: "secret"
+
+# to refrance "{{ user.name }}"
+
+
+#---------------------------------------------
+
+# Check what is Registering a Variable , Varaiable Precedence and Variable Scope  
+
+#----------------------------------------------
+
+# Chcek what is variable scope 
+
+#---------------------------------------------
+
+# Chcek what is Magic Variables 
+
+# They are used to get variables defined on other hosts 
+
+# /etc/ansible/hosts
+
+# Web1 ansible_host=172.1.10.100
+# Web2 ansible_host=172.1.10.101 dns_server=10.5.5.4
+# Web4 ansible_host=172.1.10.102
+
+name3: Print dns server
+hosts3: all
+tasks3:
+  - debug :
+      msg: '{{ hostvars['web2'].dns_server }}'
+
+
+
+

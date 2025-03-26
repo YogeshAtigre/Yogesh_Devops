@@ -1,0 +1,18 @@
+# Handlers : They are defined as specific task inansible that are assoicated with specific events/notifications . They are defined in a playbook 
+#            and are excuted when notified by a task , handlers help in managing actions based on systems state/configurations changes of the system
+# eg:- 
+-
+  name: Deploy Application
+  hosts: localhost
+  tasks:
+    - name: Copy Application code
+      Copy: 
+        src: app_code/
+        dest: /otp/application
+      notify: Restart the Application Service
+
+  handlers:
+    - name: Restart the Application Service
+      service:
+        name: application_service
+        state: restarted

@@ -1,0 +1,13 @@
+# Ansible collection: They are defined as a way to packages and distribute modules, roles , plugins, etc. It is self-contained unit that encapsulates this components making them easily accessbile and shareable.
+#                     Collections can be Community or Vendor-created 
+# to install a collection run  ansible-galaxy collections install network.cisco , ansible-galaxy collections install amazon.aws
+
+#eg : - 
+- hosts: localhost
+  collection: 
+    - amazon.aws
+  tasks:
+    - name: creating a s3 bucket using a amazon.aws collection
+      aws_s3_bucket:
+        name: my-bucket
+        region: us-west-1

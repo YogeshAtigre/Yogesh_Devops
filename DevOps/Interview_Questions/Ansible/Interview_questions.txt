@@ -1,0 +1,27 @@
+1) What is Cofiguration management and what do we understand by it ?
+2) How do we do Cofiguration management with CICD?
+3) What are the different tools availabe in the market for Cofiguration management and why do choose ansible over all the other tools?
+4) what is pull and pushed based architure?
+5) Explain the workflow of ansible.
+6) Explain modules in ansible.
+7) Explain inventory in ansible.
+8) Explain ansible vault
+9) Explain what is ansible tower 
+10) Scenario - Consider a secanario where you have multiple files with that you want to copy from one location to another location 
+and this has to happen recursively, how wil you do it ?
+11) How do you encrypt a ansible file ?
+12) How do you create a encrypted ansible file ?
+13) How do you differetiate between plays and playbook?
+14) Task - a) Write a playbook to install nginx
+15) How can you catch errors in playbook and can you ignore , if then how?
+16) Scenario - There are 2000+ servers in inventory setup in ansible galaxy out of which there are few decommissioned servers,
+     How will you exclude or identify the decommissioned ones?  
+17) What are ansible facts and how do we use them?
+18) How do you control the order of execution in an playbook
+19) What are the provisons in ansible to order and structure a playbook 
+20) How do ansible manage windows systems 
+21) Explain Collections in ansible
+22) Explain roles in ansible
+23) Explain templates in ansible
+24) Explain handlers in ansible
+25) 

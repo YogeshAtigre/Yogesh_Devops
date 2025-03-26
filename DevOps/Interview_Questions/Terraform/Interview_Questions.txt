@@ -1,0 +1,34 @@
+1) Explain what is Terraform
+2) Explain the workflow of Terraform
+3) What are the all the other tools similar to terraform and why do prefer terraform over others
+4) Secnario - What are the different resources that you have created using terraform 
+5) Explain Providers in terraform
+6) How do you bring resource which were not created using terraform under it's management
+7) Explain statefile in terraform , how is it created , where is it located 
+8) Secnario - what will you do if your statefile is deleted 
+9) what are some keys feature of terraform
+10) how do you delete unawanted resource using terraform
+11) Explain terraform validate command 
+12) Explain Modules in terraform
+13) Explain lifecycle in terraform
+14) Is terraform a Configuration management tool , What is the difference between terraform and other Configuration management tools
+15) Secnario - You have 20 + resource running fine over a public (could be any GCP,AWS,Azure) and we want to destroy/delete 
+               only a single resource using terraform is it possible to do and how do you do it 
+16) How to preserve the key that you have created using terraform.
+17) Secnario - You have stored the statefile in remote storage like Azure blob or AWS s3 and it acidentally got deleted , what will 
+                happen if run terraform apply or terraform plan or any terraform command
+18) Explain remote backed in terraform
+19) What is state locking and how do you enable it ?
+20) How do we provide variable value at runtime
+21) Secnario - Lets say a company has multiple environment , how do you manage terraform code into/for those multiple environments
+22) Explain terraform workspace and resuable modules 
+23) Explain cons of terraform
+24) what is a terraform resource and how do you define in it Configuration file
+25) How do you manage access keys , passwords and sensitive infromation using terraform
+26) Explain datasources in terraform
+27) How do you use datasources to retrive infromation from external system , specially sensitive infromation
+28) Secnario - How to create a Dev,QA,Stagging and Production environment using terraform
+29) Secnario - Lets say you are team 3 to 5 people working on same terraform project then how do you collaborate
+30) How do you handel dependency between resources in terraform
+31) How do you think is terraform platform agnostic , if yes why and if no then why
+

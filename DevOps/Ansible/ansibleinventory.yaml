@@ -1,0 +1,90 @@
+# Ansible is agentless as it uses SSH for limux and PowerShell Remoting for windows to connect to servers to perform its 
+# configurations , information about this target system is stored in a inventory file (/etc/ansible/hosts default path)
+# eg :- server1.company.com (it is in a ini format) there can also be grps 
+# eg : 
+# [mail]
+# server1.company.com
+# server2.company.com
+# [db]
+# server3.company.com
+# server4.company.com
+
+# When also set alias for different list of servers by using ansible_host(inventroy parameter) in the Ansible inventory file 
+# eg 
+# web   ansible_host=server1.company.com ansible_connection-ssh
+# db    ansible_host=server2.company.com ansible_connection-winrm
+# mail  ansible_host=server3.company.com ansible_connection-ssh
+# app   ansible_host=server4.company.com ansible_connection-localhost
+
+# other inventory parameters are 
+# ansible_connection-ssh/winrm/localhost   (defines how ansible connects to target server)
+# ansible_port-22/5986
+# ansible_user-root/administrator
+# ansible_ssh_pass-Password
+
+# ansible supports two main inventory formats
+# 1) ini
+# 2) YAML
+
+#1) ini eg :
+# [webserver]
+# webserver1.example.com
+# webserver2.example.com
+# [dbserver]
+# dbserver1.example.com
+# dbserver2.example.com
+
+#2) YAML eg :
+# all:
+#   children:
+#     webservers:
+#       hosts:
+#         webserver1.example.com:
+#         webserver2.example.com:
+#     dbservers:
+#       hosts:
+#         dbserver1.example.com:
+#         dbserver2.example.com:
+
+
+#-------------------------------------------Parent-Child Group Relationships----------------------------------------
+#Parent Group: Also known as a nested group, it can contain multiple child groups.
+
+#Child Group: A subgroup that inherits properties from its parent group and can override certain variables.
+
+# In the below examples webservs
+
+# INI format webserver is a parent group
+
+# [webserver:children]
+# webserver_us
+# webserver_eu
+
+# [webserver_us]
+# server1.us.com ansible_host=192.168.10.101
+# server2.us.com ansible_host=192.168.10.102
+
+# [webserver_eu]
+# server1.eu.com ansible_host=10.168.10.103
+# server1.eu.com ansible_host=10.168.10.104
+
+
+
+# YAML format
+
+# all:
+#   children:
+#     webserver:
+#       children:
+#         webserver_us:
+#           hosts:
+#             server1.us.com:
+#               ansible_host=192.168.10.101
+#             server2.us.com:
+#               ansible_host=192.168.10.102
+#         webserver_eu:
+#           hosts:
+#             server1.eu.com:
+#               ansible_host=10.168.10.103
+#             server2.eu.com:
+#               ansible_host=10.168.10.104

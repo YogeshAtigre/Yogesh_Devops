@@ -1,0 +1,7 @@
+1) ansible-config list : To list all the avaliable config files
+2) ansible-config view : To show yhr current config files
+3) ansible-config dump : Shows the current settings 
+
+
+
+

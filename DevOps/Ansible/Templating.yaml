@@ -1,0 +1,11 @@
+# Ansible also utilizis jinja2 templeting , check out what it is 
+
+# eg : using a jinja2 template in playbook 
+
+- 
+  hosts: webserver
+  tasks:
+    - name: Copying the index.html to remote servers
+      template:
+        src: index.html.j2
+        dest: /var/www/nginx-default/index.html

@@ -1,0 +1,6 @@
+# When ansible connects to a machine , it first gathers all the information about the system it is connected to (hosts/target system) like 
+# its O.S , Network Configurations , Storage etc this is called as facts in ansible , this is the first step that ansibel runs 
+# , it runs automatically even if you do not make a call to it , the facts are gathered by module called as setup
+# All the facts are stored in a variable called as ansible_facts.
+# in order to block the facts gathering we can use a gather_facts: no in playbook , there also settings to trun facts gathering
+# on and off in ansible.cfg file . Note ansible only gathers facts about the hosts that are in the play/playbook 

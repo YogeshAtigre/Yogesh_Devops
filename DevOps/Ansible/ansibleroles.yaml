@@ -1,0 +1,35 @@
+# Roles - In ansible a role is provided to a machine to make it ta specific type , eg:- if assign a host machine a mysql role
+# i.e we make it a mysql db server and we install all the dependecies ,pre-rquistes to make it a mysql server/machine.This roles are 
+# generally pre-written and can direclty be called in a playbook and are shareable with others.
+
+# eg:
+-
+  name: Install and Configure mySQL
+  hosts: dbserver
+  roles:
+    - mysql
+
+# Ansible galaxy is place/community where you find pre-built roles , roles also helps in organiztion of your ansible code as it follows a below mentioned directory structure
+# eg : -
+# myrole (name of role you want to create)
+  # |
+  # |__README.md
+  # |
+  # |__templates
+  # |
+  # |__tasks
+  # |
+  # |__handlers
+  # |
+  # |__vars
+  # |
+  # |__defaults
+  # |
+  # |__meta
+
+  # this is structure you need to create if want create a role from scratch but , this directory structure can also be created automatically
+  # by using a command called as ansible-galaxy init myrole
+  # in order to access roles from playbook you either move the myrole directory inside the directory called roles(create it if does not exists)
+  # and move the roles inside the directory containing the playbook or the in default role directory (/etc/ansible/roles) , whoes path is already mentioned 
+  # in your ansible.cfg file , to use roles from ansible-galaxy use the ansible-galaxy install <name>.mysql , which will install the role in your default roles directory 
+  # and you can access them in playbook 

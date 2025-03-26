@@ -1,0 +1,7 @@
+# It is piece of code that modifies the functionality of Ansible , it enhances various aspects of ansible such a inventroy, Modules, Callbacks etc.
+# It provides a fexible and powerful way to cutomize. Different Plugins can be Inventory Plugin , Action Plugin , Module Plugin , Callback Plugin,
+# Lookup Plugins , Filter Plugins, Connection Plugins 
+
+# Modules and Plugins Index  - It is a Comprehensive resource offering detailed information on Ansible's available plugins and module.
+# It helps to navigate ansible's extensive modules and plugins, helping you to find the right tool for optimal automation, without index
+# tracking and understanding the numerous ansible modules and plugins would be difficult it features include search and filtering , detailed documentation , Version compatibility, Community contributions                                

@@ -1,0 +1,22 @@
+# Questions : Write a playbook to install nginx on RedHat and Debian Servers
+- 
+  name: Installing nginx on Redhat and Debian 
+  hosts: webserver                                          # (it is defined in a ansible inventory file)
+  become: yes                                               #(to become is used to escalate privileges and execute tasks with a different user, typically with elevated privileges like the root user)
+  tasks:
+      - name: Updating the system packages
+        apt:
+          update_cache: yes
+      - name: Installing nginx on Debian
+        apt:
+          name: nginx
+          state: present
+          when: ansible_os_family == 'Debian'
+      - name: Installing nginx on Redhat
+        yum:
+          name: nginx
+          state: present
+          when: ansible_os_family == 'RedHat'
+
+#-----------------------------------------------------------------------------------------------------------------------------
+

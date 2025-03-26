@@ -1,0 +1,16 @@
+1) What is the diffrence difference between ec2 auto scaling and aws autoscaling
+2) What is the difference between launch configuration and launch template 
+3) Secnario - Your have applications , it processes messages and you are using ec2 for it (we can use queues for it) 
+   you only have access to the dev environment as devops engineer we want you to create a ASG and how will you test it ,
+   how will be producer and consumer ?
+4) Explain cloudfront.
+5) Explain what is S3.
+6) How do you host a static website on AWS?
+7) When do you choose s3 and when do you choose cloudfront 
+8) What is IAM?
+9) What is difference between IAM policy and IAM role?
+10) What is AWS Lambda
+11) What is vertical scaling and horizontal scaling ?
+12) Is vertical scaling possible in Lambda , if it possible then give an example use case 
+13) Explain AWS CDK
+14) 

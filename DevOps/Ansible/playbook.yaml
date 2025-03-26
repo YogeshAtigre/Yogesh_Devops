@@ -1,0 +1,45 @@
+# Playbook -  It is a single YAML file containing set of plays
+# Plays - It is defined as the set activities (tasks) to be run on the host
+# Task - An action to be performed on the host like Execute a command , Run a script , Intsall a package , Shutdown , Restart 
+# Modules - Different actions run by tasks are called as modules (eg - command , yum , service in  below mentioned playbook)
+# to run a playbook SYNTAX - ansible-playbook <playbook file name>
+# eg : -
+
+- 
+  name: Play 1
+  hosts: localhost
+  tasks:
+    - name: Execute date command
+      command: date
+    - name: Execute a script on server
+      command: test_script.sh
+-
+  name: Play 2
+  hosts: localhost
+  tasks:
+    - name: Install httpd service
+      yum:
+        name: httpd
+        state: present
+    - name: Start web server
+      service : 
+        name: httpd
+        state: started
+
+
+# Verifying a playbook
+# Ansible provides various modes to verfiy the playbook most , out of which most important one are Check Mode and Diff Mode
+# 1) Check Mode - Ansibles "dry run" mode where no actual changes are made on the hosts , It allows to preview of playbook changes
+#             without applying them , Use the --check option to run a playboook in check mode 
+# eg:- ansible-playbook test.yml --check
+# Note - All the modules in ansible do not support the check mode , if you run a playbook that has module that does not support 
+#        check mode with , then task will be skipped
+
+# 2) Diff Mode - When run along with a check mode it provides a before-and-after comparison of playbook changes , it helps
+#                to understand and verify the impact the playbook changes before applying them , it can be run by utilizing the 
+#                 --diff option.
+# eg:- ansible-playbook test.yml --check --diff
+
+# 3) Syntax check mode - Ensure the playbook syntax is error free
+# eg:- ansible-playbook test.yml --syntax-check
+

@@ -1,0 +1,54 @@
+# Question :- Write a playbook to install nginx 
+---
+- name: Install and start Nginx
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: Update package cache (Debian-based)
+      apt:
+        update_cache: yes
+      when: ansible_os_family == "Debian"
+
+    - name: Install Nginx (Debian-based)
+      apt:
+        name: nginx
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: Install Nginx (RedHat-based)
+      yum:
+        name: nginx
+        state: present
+      when: ansible_os_family == "RedHat"
+
+    - name: Start and enable Nginx service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Allow HTTP traffic (firewalld)
+      firewalld:
+        service: http
+        permanent: yes
+        state: enabled
+      when: ansible_os_family == "RedHat"
+
+    - name: Allow HTTP traffic (UFW)
+      ufw:
+        rule: allow
+        port: 80
+        proto: tcp
+      when: ansible_os_family == "Debian"
+
+    - name: Verify Nginx is running
+      command: systemctl is-active nginx
+      register: nginx_status
+      changed_when: false
+
+    - name: Display Nginx status
+      debug:
+        msg: "Nginx is {{ nginx_status.stdout }}"
+
+# To run use ansible-playbook -i inventory install_nginx.yml

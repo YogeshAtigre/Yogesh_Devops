@@ -1,0 +1,5 @@
+# Ansible Lint is a command line tool that performs linting on Ansible playbook, roles and collections
+# It Checks your code for potential errors,bugs,stylistic errors, and suspicious constructs
+# It's akin to having a seasoned Ansible mentor guiding you , providing valuable insigths, 
+# and catching issues that might have slipped past your notice
+# eg - ansible-lint test.yml

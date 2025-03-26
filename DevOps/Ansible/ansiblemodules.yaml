@@ -1,0 +1,55 @@
+# There number of different modules used in ansible , some of the important few are System , Command, Cloud, Files, Database,
+# Windows etc , whole list can be found at - : https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
+
+# 1) Command module - Executes a commands on a remote server
+# eg:- 
+-
+  name: Executing a command using the Command module
+  hosts: localhost
+  tasks: 
+   - name: Find out the date 
+     command: date
+   - name: Display the content of resolv.conf file 
+     command: cat /etc/resolv.conf
+   - name: changing the directory before running the command
+     command: cat test.txt chdir=/home
+   - name: checking if a directory exists , if not then creating it 
+     command: mkdir /testfolder creates=/testfolder
+
+# 2) Script module - Executes a script on local or on a remote machine/node after trasferring it 
+# eg:- here -some--arguments 1234 is dummy where you can replace with your actual argunments  
+-
+  name: Executing a script using a script module
+  hosts: localhost
+  tasks:
+    - name: Run a script on a local server
+      script: /some/local/script.sh -some--arguments 1234 
+
+# 3) Service module - Used Manage services , we can start , stop , restart them etc 
+# eg - 
+# Note both different ways can be used in a yaml playbook (referring to different ways to start the service httpd and nginx)
+# the difference between the state=start and state=started is that with start we start the service but with started we ensure the service is started
+# i.e if httpd is not already started => start it , if httpd is already started => do nothing , this is called as idempotency 
+- 
+  name: Start Services in order
+  hosts: localhost
+  tasks:
+    - name: Start the Database service
+      service: name=mysql state=started
+    - name: Start the http service
+      service: name=httpd state:started
+    - name: Start nginx service 
+      service:
+        name: nginx
+        state: started
+
+# 4) linefile module - Search for a line in a file and replace it or add it if doesn't exist.
+# eg -
+- 
+  name: Entry in resolv.conf file
+  hosts: localhost
+  tasks:
+    - name: Adding in resolv.conf file
+      linefile:
+      path: /etc/resolv.conf
+      line: 'nameserver 10.0.1.2' 
