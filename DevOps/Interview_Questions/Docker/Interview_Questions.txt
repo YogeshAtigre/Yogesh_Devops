@@ -1,0 +1,29 @@
+1) What is Docker ?
+2) What is difference between and Containerization and Virtualization
+3) What is the difference between Docker Container and Virtual Machine 
+4) Scenario - How would ensure that the dokers Containers restart automatically , 
+              when the docker host is restarted
+5) What is docker compose , where is it used (explain with a realworld use case)
+6) What is Docker image and Docker Container , and what is the difference between these two 
+7) Can you modify the existing docker image and Can I create a new docker from an existing image 
+8) Explain Docker networks and its types 
+9) Scenario - You have installed jenkins on a docker Container and it running fine , after few 
+                days the container is restarted and now nothing inside jenkins is working , can 
+                find out and explain what went wrong here
+10) Explain docker volumes along with its types
+11) How to enable data persistence in docker 
+12) What could be possiable reasons of docker container not starting proprely and how to troubleshoot it 
+13) Explain docker swarm
+14) What is difference between docker swarm and kubernetes 
+15) How to secure your docker containers and images and list all the best pratices 
+16) What does scanning of docker images mean ? 
+17) Explain Docker content trust
+18) How do you check the health of the docker containers / Containerized application 
+19) Explain Docker multistage build and why is it used along a realworld use case
+20) Explain layers of a docker image
+21) What are different type of deployment startergies and can you explain any of using docker
+22) Epxlain different components of docker 
+23) Are Docker container wirteable/editable ? if then how ?
+24) What is mount in docker and explain its types 
+25) Explain docker events 
+

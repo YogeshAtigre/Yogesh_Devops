@@ -1,0 +1,16 @@
+version: "3"
+services:
+  user-service:
+    image: user-service-image
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile 
+    ports:
+      - "3000:3000"
+    environment:
+      - PROD_DEV=production
+    volumes:
+      - .:/code
+    depends_on: 
+      - product-serveice
+    
