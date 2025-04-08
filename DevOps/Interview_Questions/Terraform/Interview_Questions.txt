@@ -26,9 +26,16 @@
 24) what is a terraform resource and how do you define in it Configuration file
 25) How do you manage access keys , passwords and sensitive infromation using terraform
 26) Explain datasources in terraform
-27) How do you use datasources to retrive infromation from external system , specially sensitive infromation
+27) How do you use datasources to retrive infromation from external system , specially sensitive infromation 
 28) Secnario - How to create a Dev,QA,Stagging and Production environment using terraform
 29) Secnario - Lets say you are team 3 to 5 people working on same terraform project then how do you collaborate
 30) How do you handel dependency between resources in terraform
 31) How do you think is terraform platform agnostic , if yes why and if no then why
+32) Explain provisioners in terraform
+33) What are Terraform variables? How do you assign values to variables in Terraform?
+34) What is the purpose of Terraform's count parameter?
+35) How do you authenticate Terraform with cloud providers? 
+36) Secnario - 4.	Resource Dependencies: You’re managing resources that depend on each other. 
+                    How would you explicitly manage these dependencies in Terraform to ensure correct deployment order?
+37) What is for_each in terraform? What is the difference between for_each and count ?
 
