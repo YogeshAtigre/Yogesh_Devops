@@ -1,0 +1,11 @@
+# Build stage
+FROM maven:3.8.5-openjdk-17 As builder
+WORKDIR /builder
+COPY . .
+RUN maven clean package -DskipTests
+# Run time stage 
+FROM openjdk-17-slim
+WORKDIR /app
+COPY --from=builder /builder/myapp.jar app.jar
+EXPOSE 8080
+ENTRYPOINT [ "java" "-jar" "app.jar" ]

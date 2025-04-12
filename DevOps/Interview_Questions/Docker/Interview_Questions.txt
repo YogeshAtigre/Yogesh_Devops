@@ -19,11 +19,30 @@
 16) What does scanning of docker images mean ? 
 17) Explain Docker content trust
 18) How do you check the health of the docker containers / Containerized application 
-19) Explain Docker multistage build and why is it used along a realworld use case
+19) Explain Docker multistage build and why it is used , along with a real-world use case
 20) Explain layers of a docker image
 21) What are different type of deployment startergies and can you explain any of using docker
 22) Epxlain different components of docker 
 23) Are Docker container wirteable/editable ? if then how ?
 24) What is mount in docker and explain its types 
 25) Explain docker events 
+26) What is maintainer in docker?
+27) Explain the difference between CMD and ENTRYPOINT in docker 
+28) Explain Docker lifecycle?
+29) Explain difference between COPY and ADD in Docker
+30) Can you isolate networking between the containers 
+31) What is distroless images in docker
+32) Scenario - As we know docker daemon is a single daemon process. which can a single point of failure,
+               as if the docker daemon goes down for some reason all the applications will go down.
+               What are some soultions for the above mentinoed problem
+33) Scenario - If you are running too manny containers on a single host machine, you may experiance issues
+               with the resorces constrains, this can result in slow performance as well as crashes.
+               How do you deal with this problem
+34) Scenario - How do you dockerize a java based application.(Extra points if you can provide a proper dockerfile). Provide a step by step 
+               approach and also explain all the commands used.
+35) Scenario - Docker daemon runs as a root user, which is a security threat. Any process running as a root can have adverse effect.
+               When it is compromised for security reason , it can impact other application on the host as well, how do you deal with
+               this problem. 
+
+
 
