@@ -1,0 +1,49 @@
+1)	Explain Kubernetes and its architecture
+2)	What are Kubernetes pods, and how are they managed?
+3)	How does Kubernetes handle service discovery?
+4)	What are ConfigMaps and Secrets in Kubernetes, and when would you use them?
+5)	Explain Kubernetes namespaces and their purpose.
+6)	How do you implement autoscaling in Kubernetes?
+7)	What is a Kubernetes deployment, and how does it work?
+8)	Explain the differences between StatefulSets and Deployments.
+9)	How do you manage storage in Kubernetes?
+10)	What is a Kubernetes Ingress, and how does it function?
+11)	Explain rolling updates and rollback strategies in Kubernetes.
+12)	How would you monitor a Kubernetes cluster?
+13)	Explain etcd and its role in a Kubernetes cluster?
+14)	How do you secure communication between pods?
+15)	Explain Helm charts and the process of creating and managing them.
+16) Explain how to handle distribution of resources effectively using Kubernetes
+17) Explain Node affinity ,taint and tolerations in Kubernetes
+18) Explain Operator in Kubernetes
+19) Explain and list the Security practices that can be used for Kubernetes
+20) Explain Ingress default backend
+21) Is there any way to provide external Network Connectivity to Kubernetes
+22) How to forward a port from a container->service->Ingress->Browser
+23) Explain Liveness and readiness probe and self-healing in Kubernetes
+24) Is Kubernetes portabel? If Yes , then how?
+25) 
+
+
+
+
+
+
+
+Secnario
+1)	Pod Scaling: You have a deployment that’s experiencing high CPU usage. 
+                 Describe how you would configure Kubernetes to scale pods based on CPU metrics automatically.
+
+2)	Service Discovery: Your application consists of multiple microservices that need to communicate with each other. 
+                       How does Kubernetes handle service discovery, and how would you configure it for your app?
+
+3)	Persistent Storage: An application running on Kubernetes requires persistent storage for its database. 
+                        Describe the process for setting up and managing persistent storage in Kubernetes.
+
+4)	Handling Configurations: You need to store configuration settings and sensitive data in Kubernetes for your application. 
+                             How would you manage these securely and effectively?
+
+5)	Rolling Updates: Explain how you would perform a rolling update for a deployment in Kubernetes and ensure minimal downtime during 
+                     the update
+
+6) Transtion from Monolithic to Microservices architecture and what role does Kubernetes play in it.
