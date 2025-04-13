@@ -1,0 +1,24 @@
+CICD Jenkins
+1.	What is Jenkins and how does differ from other CI/CD tools?
+2.	What are Jenkins pipelines, and how do they work?
+3.	Explain the difference between declarative and scripted pipelines.
+4.	How do you manage dependencies in Jenkins pipelines?
+5.	What plugins have you used in Jenkins, and why?
+6.	How do you use Jenkins to automate deployment to a Kubernetes cluster?
+7.	Describe Jenkins multibranch pipelines and their use cases.
+8.	What is the purpose of the Jenkinsfile, and what are its main components?
+9.	How do you handle credentials in Jenkins securely?
+10.	How would you trigger a Jenkins job from a GitHub repository?
+11.	Explain how you can implement parallel builds in Jenkins.
+12.	What are the common issues faced in Jenkins jobs, and how do you resolve them?
+13.	How can you ensure Jenkins is scalable in large projects?
+14.	How do you monitor and maintain the health of a Jenkins server?
+15.	How can you integrate Jenkins with tools like Ansible or Terraform?
+
+
+Scenario-Based Questions 
+1.	Pipeline Configuration: Describe how you would set up a Jenkins pipeline to build, test, and deploy a Java application. What steps and plugins would you include?
+2.	Automated Testing: How would you configure Jenkins to automatically run tests every time new code is pushed? Explain the process and how you’d handle test failures.
+3.	Environment Variables: Your Jenkins job needs to access sensitive information like API keys. How would you securely manage these variables within Jenkins?
+4.	Error Handling in Pipelines: A build occasionally fails due to network issues. How would you set up retry logic in Jenkins to handle this?
+5.	Multi-Branch Pipeline: Explain how you’d set up a Jenkins multi-branch pipeline for a project with multiple feature branches, ensuring each branch has its own testing and deployment workflow.

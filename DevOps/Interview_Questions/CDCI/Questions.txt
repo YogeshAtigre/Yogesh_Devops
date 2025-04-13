@@ -1,0 +1,16 @@
+CICD
+1.	What are the core principles of a CI/CD pipeline?
+2.	Describe the differences between CI, CD, and Continuous Deployment.
+3.	How would you structure a CI/CD pipeline for a microservices application?
+4.	What role does code testing play in a CI/CD pipeline?
+5.	How do you handle rollbacks in a CI/CD pipeline?
+6.	Explain blue-green deployments and canary releases.
+7.	What are the best practices to follow in CI/CD pipelines for faster feedback?
+8.	How would you implement version control in a CI/CD pipeline?
+9.	How can CI/CD pipelines support multiple environments (dev, staging, production)?
+10.	What is the role of secrets management in CI/CD, and how would you implement it?
+11.	How do you monitor the success or failure of pipeline stages?
+12.	What are some common CI/CD pipeline issues, and how do you troubleshoot them?
+13.	Describe a pipeline failure scenario and how you debugged it.
+14.	What are some ways to improve the security of a CI/CD pipeline?
+15.	How do you ensure that a CI/CD pipeline scales efficiently as the project grows?
