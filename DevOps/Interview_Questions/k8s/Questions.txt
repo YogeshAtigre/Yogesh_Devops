@@ -16,21 +16,21 @@
 16) Explain how to handle distribution of resources effectively using Kubernetes
 17) Explain Node affinity ,taint and tolerations in Kubernetes
 18) Explain Operator in Kubernetes
-19) Explain and list the Security practices that can be used for Kubernetes
-20) Explain Ingress default backend
-21) Is there any way to provide external Network Connectivity to Kubernetes
-22) How to forward a port from a container->service->Ingress->Browser
-23) Explain Liveness and readiness probe and self-healing in Kubernetes
+19) Explain and list the Security practices that can be used for Kubernetes.
+20) Explain Ingress default backend.
+21) Is there any way to provide external Network Connectivity to Kubernetes.
+22) How to forward a port from a container->service->Ingress->Browser.
+23) Explain Liveness and readiness probe and self-healing in Kubernetes.
 24) Is Kubernetes portabel? If Yes , then how?
-25) 
+25) Explain Replica sets in Kubernetes.
+26) Explain the upgradtion of Kubernetes cluster.
+27) Epxlain self hosted k8s cluster.
+28) Explain Kubernetes Service account.
+29) Explain Monitoring of Kubernetes.
+30) what is the differences between Replica-sets and deployments  
 
 
-
-
-
-
-
-Secnario
+Scenario
 1)	Pod Scaling: You have a deployment that’s experiencing high CPU usage. 
                  Describe how you would configure Kubernetes to scale pods based on CPU metrics automatically.
 
@@ -46,4 +46,7 @@ Secnario
 5)	Rolling Updates: Explain how you would perform a rolling update for a deployment in Kubernetes and ensure minimal downtime during 
                      the update
 
-6) Transtion from Monolithic to Microservices architecture and what role does Kubernetes play in it.
+6) Transtion from Monolithic to Microservices architecture : Your company wants to move from a Monolithic to Microservices architecture,
+                                                             what role does Kubernetes play in it.
+                                                        
+7)                                                     
