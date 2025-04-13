@@ -1,0 +1,22 @@
+1.	•  Basics: Explain the core differences between IaaS, PaaS, and SaaS. Can you provide examples for each?
+2.	•  Multi-Cloud vs. Hybrid Cloud: How do multi-cloud and hybrid cloud architectures differ? What are the benefits of each?
+3.	•  Load Balancing: Describe how you would implement load balancing in a cloud environment and which cloud-native tools would be most useful.
+4.	•  Auto-Scaling: How does auto-scaling work in the cloud, and what are the typical triggers you configure for scaling up or down?
+5.	•  Resource Optimization: How do you identify and manage under-utilized resources in a cloud environment to reduce costs?
+6.	•  Data Security: Describe best practices for securing data at rest and in transit within a cloud environment.
+7.	•  Networking: Explain how you would set up a secure VPC, including subnets, route tables, and gateways.
+8.	•  Monitoring and Alerting: What cloud monitoring tools have you used, and how do you set up alerting for critical services?
+9.	•  Containers: Explain the role of container orchestration (like Kubernetes) in the cloud and why it’s essential.
+10.	•  Backups and Disaster Recovery: How would you set up backup and disaster recovery for critical applications hosted on the cloud?
+11.	•  Cost Management: What tools or practices do you use for monitoring and controlling cloud expenses?
+12.	•  Compliance: Describe how you ensure compliance with standards like GDPR, HIPAA, or PCI-DSS in the cloud.
+13.	•  Cloud Migration: What are the steps involved in migrating an on-premise application to the cloud, and what challenges might arise?
+14.	•  Serverless: Can you explain the benefits of serverless architecture and where it may be most applicable in cloud environments?
+15.	•  Orchestration Tools: Have you used cloud-native orchestration tools? What are the benefits of using these over manual configuration?
+
+Scenario-Based Cloud Questions (5)
+1.	Unplanned Downtime: A business-critical application goes down in your cloud environment. Walk us through how you would diagnose and resolve the issue.
+2.	Scaling for Traffic Spikes: An unexpected spike in traffic is causing slow response times. Describe how you would handle this situation in real time.
+3.	Security Incident: You suspect a data breach within your cloud environment. How would you investigate and contain this incident?
+4.	Cost Overrun: Your monthly cloud bill has unexpectedly doubled. Describe your approach to identify the cause and prevent future incidents.
+5.	Multi-Region Failover: A region-wide outage affects your application's primary region. Explain how you would architect the cloud infrastructure to ensure high availability and failover support.
