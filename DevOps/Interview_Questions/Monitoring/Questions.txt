@@ -1,0 +1,21 @@
+1.	You need to monitor a microservices application running on Kubernetes. How would you configure Prometheus for this?
+2.	Describe how you would set up alerting rules for CPU and memory thresholds in Prometheus.
+3.	Explain how you would handle Prometheus data retention and storage for long-term metrics.
+4.	You need custom application metrics. How would you implement this in Prometheus?
+5.	How would you configure Prometheus to scrape metrics from an application running outside the Kubernetes cluster?
+6.	Describe how you would set up high availability for Prometheus.
+7.	Explain how you would manage alert notifications for different teams using Alertmanager.
+8.	How would you set up a Prometheus federation to monitor multiple data centers?
+9.	Describe how you would handle scaling and resource usage of Prometheus in a large environment.
+10.	 Explain how you would create and use recording rules to optimize Prometheus queries.
+
+11.	 You need to visualize metrics from multiple data sources, such as Prometheus and Elasticsearch. Describe how you would configure Grafana for this.
+12.	 Explain how you would create a dashboard for monitoring application health in real time.
+13.	 Describe how you would set up Grafana alerts for critical metrics and integrate them with Slack or email.
+14.	 Your Grafana dashboards need to be reused across multiple environments. How would you approach this?
+15.	 Explain how you would use Grafana variables to make dashboards more dynamic and reusable.
+16.	 Describe how you would set up Grafana user roles to restrict access to specific dashboards.
+17.	 You need to create a monthly performance report for stakeholders. How would you set up Grafana to support this?
+18.	 How would you export and import Grafana dashboards for backup or migration purposes?
+19.	 Explain how you would implement Grafana annotations to log deployment changes on dashboards.
+20.	Describe how you would manage performance optimization in Grafana for complex queries.
