@@ -1,16 +1,21 @@
-1) What is the diffrence difference between ec2 auto scaling and aws autoscaling
-2) What is the difference between launch configuration and launch template 
-3) Secnario - Your have applications , it processes messages and you are using ec2 for it (we can use queues for it) 
-   you only have access to the dev environment as devops engineer we want you to create a ASG and how will you test it ,
-   how will be producer and consumer ?
-4) Explain cloudfront.
-5) Explain what is S3.
-6) How do you host a static website on AWS?
-7) When do you choose s3 and when do you choose cloudfront 
-8) What is IAM?
-9) What is difference between IAM policy and IAM role?
-10) What is AWS Lambda
-11) What is vertical scaling and horizontal scaling ?
-12) Is vertical scaling possible in Lambda , if it possible then give an example use case 
-13) Explain AWS CDK
-14) 
+1.	IAM Policies: Explain how you would set up IAM policies to manage access for users and services securely.
+2.	S3 Storage Classes: Describe the different storage classes in S3 and when each is most appropriate to use.
+3.	Elastic Load Balancer (ELB): How does AWS ELB distribute traffic, and what are the differences between the various types (Classic, Application, Network)?
+4.	EC2 Pricing: Can you explain the different EC2 pricing models and when to use each?
+5.	CloudFormation: Describe the purpose of AWS CloudFormation and explain how it helps with infrastructure as code.
+6.	VPC Configuration: What are the critical components of an AWS VPC, and how would you configure it for a secure web application?
+7.	RDS Backups: How does AWS RDS manage backups, and what considerations are there for creating automated backups?
+8.	AWS Lambda: What are the primary use cases for Lambda functions, and how do you optimize performance and cost?
+9.	Cost Management Tools: What AWS tools or techniques do you use to monitor and control cloud spending?
+10.	CloudWatch Alarms: How would you set up CloudWatch alarms for critical metrics, and what actions can you take based on alarms?
+11.	AWS Auto Scaling: Describe the steps to configure Auto Scaling on EC2 and how to set up scaling policies.
+12.	Networking in AWS: How would you set up a multi-AZ, highly available application in AWS?
+13.	Route53: Explain how you would set up DNS routing in Route53 for a global audience.
+14.	AWS Security Groups vs. NACLs: Explain the difference between security groups and NACLs, and when you would use each.
+15.	EBS vs. EFS: Describe the differences between EBS and EFS, and provide use cases for each.
+Scenario-Based AWS Questions 
+16.	Unresponsive EC2 Instance: One of your EC2 instances has become unresponsive. Describe how you would troubleshoot and resolve this issue.
+17.	Data Storage Strategy: You need to store large amounts of data and access it infrequently. Explain how you would use AWS storage options to design a cost-effective solution.
+18.	Application Latency: Your web application hosted in one AWS region experiences high latency for users in another region. Describe how you would reduce latency using AWS services.
+19.	Unexpectedly High S3 Costs: You notice that the S3 storage costs have spiked. Explain how you would investigate and reduce these costs.
+20.	Cross-Region Failover: How would you architect an AWS application for failover between regions to ensure minimal downtime during regional outages?
