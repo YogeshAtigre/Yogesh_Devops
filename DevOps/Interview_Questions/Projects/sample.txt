@@ -1,0 +1,209 @@
+Below is the complete code and folder structure for a **Dockerized Voting Application** using:
+
+- **Backend**: Python (Flask)
+- **Frontend**: React.js (interactive UI)
+- **Database**: Redis
+- **Containerization**: Docker Desktop, multistage Docker build, Docker Compose
+
+---
+
+### 📁 Folder Structure
+
+```
+docker-voting-app/
+│
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── index.js
+│   │   └── components/
+│   │       └── Vote.js
+│   ├── package.json
+│   └── Dockerfile
+│
+├── docker-compose.yml
+└── README.md
+```
+
+---
+
+### 🐍 `backend/app.py`
+
+```python
+from flask import Flask, request, jsonify
+import redis
+import os
+
+app = Flask(__name__)
+redis_host = os.getenv('REDIS_HOST', 'redis')
+redis_port = 6379
+r = redis.Redis(host=redis_host, port=redis_port, decode_responses=True)
+
+@app.route('/vote', methods=['POST'])
+def vote():
+    data = request.get_json()
+    option = data.get('option')
+    if option:
+        r.incr(option)
+        return jsonify({'message': f'Vote registered for {option}'}), 200
+    return jsonify({'error': 'Invalid vote'}), 400
+
+@app.route('/results', methods=['GET'])
+def results():
+    return jsonify({key: r.get(key) for key in ['Cat', 'Dog']})
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+```
+
+---
+
+### 🧾 `backend/requirements.txt`
+
+```
+flask
+redis
+```
+
+---
+
+### 🐳 `backend/Dockerfile` (Multistage Build)
+
+```dockerfile
+FROM python:3.9-slim as builder
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+FROM python:3.9-slim
+WORKDIR /app
+COPY --from=builder /usr/local/lib/python3.9/site-packages /usr/local/lib/python3.9/site-packages
+COPY app.py .
+
+CMD ["python", "app.py"]
+```
+
+---
+
+### ⚛️ `frontend/src/App.js`
+
+```jsx
+import React, { useEffect, useState } from 'react';
+import Vote from './components/Vote';
+
+function App() {
+  const [results, setResults] = useState({ Cat: 0, Dog: 0 });
+
+  const getResults = async () => {
+    const response = await fetch('/api/results');
+    const data = await response.json();
+    setResults(data);
+  };
+
+  const castVote = async (option) => {
+    await fetch('/api/vote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ option }),
+    });
+    getResults();
+  };
+
+  useEffect(() => {
+    getResults();
+  }, []);
+
+  return (
+    <div className="App">
+      <h1>Vote for Your Favorite Pet</h1>
+      <Vote onVote={castVote} />
+      <div>
+        <p>Cat: {results.Cat}</p>
+        <p>Dog: {results.Dog}</p>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+### 📦 `frontend/src/components/Vote.js`
+
+```jsx
+import React from 'react';
+
+function Vote({ onVote }) {
+  return (
+    <div>
+      <button onClick={() => onVote('Cat')}>Vote for Cat</button>
+      <button onClick={() => onVote('Dog')}>Vote for Dog</button>
+    </div>
+  );
+}
+
+export default Vote;
+```
+
+---
+
+### 🐳 `frontend/Dockerfile` (Multistage Build)
+
+```dockerfile
+# Stage 1: Build
+FROM node:18 as builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+# Stage 2: Serve
+FROM nginx:alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+
+# Optional: Serve API proxy config if needed
+```
+
+---
+
+### ⚙️ `docker-compose.yml`
+
+```yaml
+version: '3.8'
+
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+```
+
+---
+
+Let me know if you want to include CI/CD, testing, or deployment to cloud platforms like AWS/ECS, or GitHub README templating.

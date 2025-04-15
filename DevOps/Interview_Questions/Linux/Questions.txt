@@ -1,0 +1,43 @@
+1.	Explain some of the Linux commands in day-to-day life?
+2.	How do you add a new user in Linux?
+3.	Explain the purpose of the /etc/shadow file & /etc/password file. 
+4.	How do you update packages in Linux? 
+5.	Explain the difference between apt-get and apt.
+6.	Explain the meaning of file permissions in Linux. 
+7.	Explain the Difference between chmod and chown?
+8.	What is the use of softlink? 
+9.	How does alias work in Linix?
+10.	How do you check the open ports on a Linux system?
+11.	How do you find the IP address of a Linux system? 
+12.	How do you start, stop, and restart services in Linux?
+13.	What is a cron job in Linux? 
+14.	How do you check system resources (CPU, memory usage) in Linux? 
+15. Which file is used to specify default gateway ?
+16. What are runlevels , how to switch between two runlevels?
+17. What is the NFS ? how to configure it ? what is its default port ?
+18. What is sshd ?
+19. List all the default port numbers for sshd,http,telnet,ssh,https,DNS,ftp,tftp
+20. what is LVM , how to create and use it ? or how to extend the capacity of a file system in linux
+21. what is niceness of a process and how do you set it for a particualr process? 
+22. what is the difference between ftp anf tftp ?
+23. Explain the process of server os-version upgradtion. (For RHEL Linux)
+24. Explain how to perform server patching and how do you roll back packages after patching
+25. What is rsync , scp?
+26. How do you reduce file system in linux ? Can FS reduction be done online or offline
+27. what is uptime?
+28. How to scan a disk in linux?
+29. Explain /etc/fstab
+30. Explain type of file system in linux 
+31. 
+32.
+33.
+34.
+35.
+36.
+
+Scenario-Based Cloud Questions (5)
+1.	System Monitoring: You notice that a server is running slowly. Describe the steps you would take to identify and resolve the performance bottleneck. Which Linux commands would you use, and why?
+2.	User Permissions: A new team member needs access to specific files on a server, but they should have read-only permissions. How would you set this up? Explain the commands and considerations.
+3.	Process Management: An application running on your Linux server has become unresponsive. Walk me through how you would troubleshoot this issue and terminate the unresponsive process if needed.
+4.	Automated Tasks: You need to run a maintenance script every Monday at midnight. How would you configure this using `cron`, and how would you verify it’s working as expected?
+5.	Networking: You’re asked to check if a specific port on a remote server is accessible from your Linux system. How would you approach this, and which tools would you use to diagnose and resolve any connection issues?

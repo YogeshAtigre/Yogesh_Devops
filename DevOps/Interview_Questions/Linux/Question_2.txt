@@ -1,0 +1,11 @@
+1) How to set a user password that never expires 
+2) Explain /etc/passwd and /etc/shadows files and why we can't merge files into 1 file 
+3) Explain lsof command and how to list all the files opened by particualr PID
+4) How to check kernel routing table information
+5) What is the sticky bit and what is the difference between 's' and 'S'
+
+Scenario
+1) Scenario - We are unable to unmount the file system, how do you troubleshoot it?
+2) What could be the reason that a server takes long time to repsoned after a reboot?
+3) We are trying to create a file under any partition but we are getting permission denied alert.
+   What could be the reason? Note : there is actullay no permission or space issue
