@@ -1,0 +1,22 @@
+1.	 Explain branching in Git. How would you handle a merge conflict?
+2.	 What is the difference between Git and GitHub?
+3.	 How do you handle multiple contributors working on the same file?
+4.	 Explain Git rebase vs. Git merge. When would you use each?
+5.	 How do you ensure code quality in a GitHub repository?
+6.	 How would you use Git tags, and why are they useful?
+7.	 What are Git hooks, and how are they used in CI/CD pipelines?
+8.	 How do you configure Git to track changes to specific directories or files?
+9.	 What is a Git submodule, and when would you use it?
+10.	 Explain the purpose and use of `.gitignore`.
+11.	 Describe a time when you reverted a commit. How did you handle it?
+12.	 What is the purpose of Git stash, and when would you use it?
+13.	 How do you handle large files in a GitHub repository?
+14.	 How would you create a pull request (PR), and what is the PR review process?
+15.	 Explain GitHub Actions and their use in CI/CD.
+
+Scenario-Based Cloud Questions (5)
+1.	Branching and Merging: A team member mistakenly made changes on the main branch that should have been on a feature branch. How would you correct this without losing any work?
+2.	Code Conflicts: During a pull request, you notice there are merge conflicts. Describe your approach to resolving these conflicts and ensuring the code is correct.
+3.	Reverting Commits: A recent commit introduced a bug, but there have been multiple commits since then. How would you revert this specific commit without affecting the others?
+4.	Managing Large Repositories: Your repository is becoming large and slow to work with due to some large files. How would you identify and remove unnecessary files while preserving the repository’s history?
+5.	Version Tagging: Your team wants to create a stable release version of the application. Explain how you would use Git tags to mark this release and how you would ensure only stable code gets tagged.
