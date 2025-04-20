@@ -14,11 +14,22 @@ CICD Jenkins
 13.	How can you ensure Jenkins is scalable in large projects?
 14.	How do you monitor and maintain the health of a Jenkins server?
 15.	How can you integrate Jenkins with tools like Ansible or Terraform?
-
-
+16. Explain the difference between a pipeline and free-style project in Jenkins
+17. how to distribute Jenkins pipeline execution to multiple agents
+18. Explain agents in Jenkins and if you have installed Jenkins on a machine can that 
+    machine be made into the Jenkins agent
+19. How do you parameterize a Jenkinsfile?
+20. Explain how do you manage artifacts in Jenkins?
+21. Explain Jenkins shared library and its use.
+22. Explain steps required to configure Master Slave architecture in Jenkins 
 Scenario-Based Questions 
 1.	Pipeline Configuration: Describe how you would set up a Jenkins pipeline to build, test, and deploy a Java application. What steps and plugins would you include?
 2.	Automated Testing: How would you configure Jenkins to automatically run tests every time new code is pushed? Explain the process and how you’d handle test failures.
 3.	Environment Variables: Your Jenkins job needs to access sensitive information like API keys. How would you securely manage these variables within Jenkins?
 4.	Error Handling in Pipelines: A build occasionally fails due to network issues. How would you set up retry logic in Jenkins to handle this?
 5.	Multi-Branch Pipeline: Explain how you’d set up a Jenkins multi-branch pipeline for a project with multiple feature branches, ensuring each branch has its own testing and deployment workflow.
+6.  How to achieve a bule green deployment in Jenkins
+7.  You have a Jenkins server running on a machine/server for the last 6 months, and due to 
+    some issue, the server /machine will be shut down. what are the steps to be taken in order 
+    to move Jenkins to a new server along , ensuring no data is lost in the process and movement 
+    is seamless 

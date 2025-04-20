@@ -13,6 +13,10 @@
 13.	 How do you handle large files in a GitHub repository?
 14.	 How would you create a pull request (PR), and what is the PR review process?
 15.	 Explain GitHub Actions and their use in CI/CD.
+16.  Explain Runners.
+17.  What is SVN and difference between Git and SVN.
+18.  Explain Git fork.
+19.  Explain the difference between git fetch and git pull
 
 Scenario-Based Cloud Questions (5)
 1.	Branching and Merging: A team member mistakenly made changes on the main branch that should have been on a feature branch. How would you correct this without losing any work?
@@ -20,3 +24,4 @@ Scenario-Based Cloud Questions (5)
 3.	Reverting Commits: A recent commit introduced a bug, but there have been multiple commits since then. How would you revert this specific commit without affecting the others?
 4.	Managing Large Repositories: Your repository is becoming large and slow to work with due to some large files. How would you identify and remove unnecessary files while preserving the repository’s history?
 5.	Version Tagging: Your team wants to create a stable release version of the application. Explain how you would use Git tags to mark this release and how you would ensure only stable code gets tagged.
+6.  Lets say, we have dev, QA, per prod, prod, and hotfix branches, and we have released a new version in production and an issue was identified. explain the branching that can be used to resolve this issue 

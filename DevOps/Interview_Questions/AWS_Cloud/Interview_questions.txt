@@ -13,9 +13,20 @@
 13.	Route53: Explain how you would set up DNS routing in Route53 for a global audience.
 14.	AWS Security Groups vs. NACLs: Explain the difference between security groups and NACLs, and when you would use each.
 15.	EBS vs. EFS: Describe the differences between EBS and EFS, and provide use cases for each.
+16. Explain difference type of EBS and its use
+17. What is an Instance profile in IAM 
+18. Explain AWS code deploy , AWS code build , AWS Pipeline
+19. Explain the difference between IAM role and IAM policies
+20. Explain CloudFront and what is POP
+21. How is a VPC protected in AWS
+22. Explain AWS WAF and sheild.
+23. Explain ECS in AWS.
+24. Explain ECR in AWS.
+25. Explain Farget in AWS.
 Scenario-Based AWS Questions 
-16.	Unresponsive EC2 Instance: One of your EC2 instances has become unresponsive. Describe how you would troubleshoot and resolve this issue.
-17.	Data Storage Strategy: You need to store large amounts of data and access it infrequently. Explain how you would use AWS storage options to design a cost-effective solution.
-18.	Application Latency: Your web application hosted in one AWS region experiences high latency for users in another region. Describe how you would reduce latency using AWS services.
-19.	Unexpectedly High S3 Costs: You notice that the S3 storage costs have spiked. Explain how you would investigate and reduce these costs.
-20.	Cross-Region Failover: How would you architect an AWS application for failover between regions to ensure minimal downtime during regional outages?
+1.	Unresponsive EC2 Instance: One of your EC2 instances has become unresponsive. Describe how you would troubleshoot and resolve this issue.
+2.	Data Storage Strategy: You need to store large amounts of data and access it infrequently. Explain how you would use AWS storage options to design a cost-effective solution.
+3.	Application Latency: Your web application hosted in one AWS region experiences high latency for users in another region. Describe how you would reduce latency using AWS services.
+4.	Unexpectedly High S3 Costs: You notice that the S3 storage costs have spiked. Explain how you would investigate and reduce these costs.
+5.	Cross-Region Failover: How would you architect an AWS application for failover between regions to ensure minimal downtime during regional outages?
+6.  A Company is trying to upload large amount of data in S3 bucket what can be steps taken to optimze the upload

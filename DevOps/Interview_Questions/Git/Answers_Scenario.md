@@ -485,3 +485,135 @@ git show v1.0.0  # view commit, tag message, author
 
 Want a **GitHub Actions workflow that auto-tags after a successful deployment**, or a **template for semantic versioning changelogs**? Let me know!
 ###############################################################################################
+6)
+Great scenario — this is a **classic release flow with multiple environments** and a real-time **hotfix requirement** after production deployment. Let’s break it down in a **structured, interview-ready** way — with diagrams and branching logic 👇
+
+---
+
+## 📘 **Scenario**:  
+> You have the following branches:  
+`dev`, `qa`, `pre-prod`, `prod`, and `hotfix`.  
+You've released a version to **`prod`**, and now a **bug is discovered in production**.  
+You need to **resolve the issue fast**, **avoid disturbing ongoing development**, and **safely patch production**.
+
+---
+
+## 🌳 **Goal**:
+- Patch `prod` **immediately**
+- Isolate the fix
+- **Merge the fix back** into `dev`, `qa`, and other branches for consistency
+
+---
+
+## 🧭 **Recommended Branching Strategy**
+
+```
+                         ┌────────────┐
+                         │   dev      │◄── ongoing development
+                         └────┬───────┘
+                              │
+                         ┌────▼─────┐
+                         │   qa     │
+                         └────┬─────┘
+                              │
+                         ┌────▼────────┐
+                         │  pre-prod   │
+                         └────┬────────┘
+                              │
+                         ┌────▼────┐
+                         │  prod   │
+                         └────┬────┘
+                              │
+                     ❗Issue Identified
+                              │
+                         ┌────▼───────┐
+                         │ hotfix/XYZ │◄── Create hotfix from `prod`
+                         └────┬───────┘
+                              │
+                  Fix → Commit → Test in staging
+                              │
+        ┌──────────────┬──────┴───────┬─────────────┐
+        ▼              ▼              ▼             ▼
+      Merge         Merge          Merge         Merge
+    into prod     into dev        into qa     into pre-prod
+```
+
+---
+
+## 🛠️ **Steps to Resolve the Issue**
+
+### 1. 🔀 **Create Hotfix Branch**
+```bash
+git checkout prod
+git pull
+git checkout -b hotfix/critical-issue
+```
+
+### 2. 🐛 **Apply the Fix**
+Make the necessary code changes and **commit them**.
+
+```bash
+git add .
+git commit -m "fix: critical bug in production - hotfix"
+```
+
+---
+
+### 3. ✅ **Test the Hotfix**
+- Push to remote
+- Run **CI pipelines** (lint, tests, etc.)
+- If possible, test it in a **staging or pre-prod clone**
+
+---
+
+### 4. 🚀 **Deploy to Production**
+Once tested, merge and deploy:
+
+```bash
+git checkout prod
+git merge hotfix/critical-issue
+git push
+```
+
+---
+
+### 5. 🔄 **Back-Merge the Hotfix**
+Now merge the fix into **all other branches** to ensure the fix isn't lost in future releases.
+
+```bash
+git checkout dev
+git merge hotfix/critical-issue
+git push
+
+git checkout qa
+git merge hotfix/critical-issue
+git push
+
+git checkout pre-prod
+git merge hotfix/critical-issue
+git push
+```
+
+🧠 *Optional:* You can squash the fix to keep history clean if using a structured commit flow.
+
+---
+
+## 🧠 **Interview Summary**
+
+> “In case of a production issue after a release, I create a hotfix branch from the `prod` branch to isolate the fix. After testing, I merge it directly into `prod` for immediate release. To avoid regression, I back-merge the hotfix into `dev`, `qa`, and `pre-prod` branches to ensure consistency across all future releases. This allows rapid resolution without disrupting ongoing development.”
+
+---
+
+## ✅ Bonus: Best Practices
+
+- Prefix with `hotfix/` for traceability
+- Include issue/ticket ID in branch name
+- Tag the fix (`v1.0.1-hotfix`)
+- Include it in release notes or changelog
+
+---
+
+Want a **Git command cheat sheet** or a **workflow diagram PDF** for this strategy? I can generate that too.
+###############################################################################################
+###############################################################################################
+###############################################################################################

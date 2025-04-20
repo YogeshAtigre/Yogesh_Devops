@@ -38,4 +38,11 @@
 36) Secnario - 4.	Resource Dependencies: You’re managing resources that depend on each other. 
                     How would you explicitly manage these dependencies in Terraform to ensure correct deployment order?
 37) What is for_each in terraform? What is the difference between for_each and count ?
+38) what is a meta argunment in a module?
+39) Explain Functions in terraform
+40) Explain dynamic data fetching in terraform.
+41) Explain how do you export data from one module to another module
+42) Explain TF_LOG variable in terraform.
+43) Explain Terraform refresh
+44) what is the difference between terraform refresh and terraform apply -refresh-only 
 
