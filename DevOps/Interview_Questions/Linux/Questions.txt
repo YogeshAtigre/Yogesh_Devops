@@ -29,10 +29,10 @@
 29. Explain /etc/fstab
 30. Explain type of file system in linux 
 31. Explain Swap memory in linux
-32. What commands can you use to run a process or task in background
-33. How make a user into a sudo user 
+32. Explain commands that you can use to run a process or task in background
+33. Explain how to make a user into a sudo user 
 34. Explain different type of shells in linux and use case of each shell.
-35. what is systemd in linux
+35. Explain systemd in linux.
 36. Explain .bashrc file
 37. Explain GRUB in linux.
 38. Explain recovery mode in linux.
@@ -44,8 +44,13 @@
 44. Explain Linux Loader.
 45. Explain make command in linux.  
 46. Explain the booting process of linux and different boot modes/levels.
-47. Explain difference between ACL and NACL.
-48. Explain Daemon in linux and what is the difference between a process and daemon
+47. Explain ACL and difference between ACL and NACL.
+48. Explain Daemon in linux and explain the difference between a process and a daemon and a thread.
+49. Explain inode in linux.
+50. Explain the meaning of 2>&1 in linux.
+51. Explain sudoers file in linux.
+52. Explain firewalld and ufw in linux.
+53. Explain isotat,vmstat in linux.
 
 Scenario-Based Cloud Questions (5)
 1.	System Monitoring: You notice that a server is running slowly. Describe the steps you would take to identify and resolve the performance bottleneck. Which Linux commands would you use, and why?
