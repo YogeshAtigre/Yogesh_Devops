@@ -28,7 +28,14 @@
 28) Explain Kubernetes Service account.
 29) Explain Monitoring of Kubernetes.
 30) what is the differences between Replica-sets and deployments  
-
+31) Explain The difference between Ingress and Load Balancer service
+32) Explain Kubelet 
+33) Explain Service Mesh in Kubernetes.
+34) Explain Admission controller in Kubernetes
+35) Explain CNI in Kubernetes
+36) Explain Ingress controller
+37) Explain Gateway API in Kubernetes
+38) Explain the difference between Ingress and Gateway API
 
 Scenario
 1)	Pod Scaling: You have a deployment that’s experiencing high CPU usage. 
