@@ -1009,4 +1009,75 @@ resource "null_resource" "config_script" {
 
 
 Would you like this added to your Terraform notes as `resource-dependencies.md`, along with both implicit and explicit examples?
-##########################################################################################################################################
+########################################################################################################################################################################
+45)
+That's a fantastic and very practical scenario—especially in team environments using **remote state backends** like **AWS S3 with DynamoDB locking**, or **Terraform Cloud/Enterprise**.
+
+---
+
+## 🔐 **Problem Scenario Recap**
+
+You and your teammate both run:
+
+```bash
+terraform apply
+```
+
+At the same time. State locking is enabled (✅ good practice), so:
+
+- Only **one** apply runs successfully.
+- The other fails with a **state lock error**.
+
+❗ You want the second `apply` **not to fail**, but instead **wait until the lock is released**, and **then proceed automatically**.
+
+---
+
+## ✅ **Solution: Use the `-lock-timeout` flag**
+
+Terraform provides a CLI option called `-lock-timeout` to **wait and retry** instead of failing immediately when the state is locked.
+
+### ✅ Example:
+
+```bash
+terraform apply -lock-timeout=300s
+```
+
+This tells Terraform to:
+- Wait **up to 5 minutes (300 seconds)** to acquire the lock.
+- Retry automatically during that time.
+- Proceed with apply once the lock is available.
+
+You can adjust the timeout as needed:
+- `-lock-timeout=30s` for 30 seconds
+- `-lock-timeout=10m` for 10 minutes, etc.
+
+---
+
+## 🔐 Applies to Remote Backends That Support Locking:
+
+✅ You can use this if you're using:
+- **AWS S3 + DynamoDB** (most common)
+- **Terraform Cloud**
+- **Consul**
+- **Google Cloud Storage** (with state locking extension)
+- **Azure Blob Storage** (with state locking support)
+
+---
+
+## 🧠 Under the Hood:
+
+Terraform by default:
+- Locks state when modifying it (to avoid race conditions)
+- Without `-lock-timeout`, will **exit immediately** on lock failure.
+
+---
+
+## 💡 Interview Summary
+
+> "`terraform apply` fails when state is locked. To make Terraform wait instead of exiting, use the `-lock-timeout` flag. It allows Terraform to wait for the lock to be released and then proceed automatically. This is especially useful in collaborative environments with remote backends like S3+DynamoDB or Terraform Cloud."
+
+---
+
+Want me to add this to your collaborative Terraform usage notes?
+########################################################################################################################################################################
+########################################################################################################################################################################
