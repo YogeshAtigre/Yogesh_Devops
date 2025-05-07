@@ -23,6 +23,23 @@
 23. Explain ECS in AWS.
 24. Explain ECR in AWS.
 25. Explain Farget in AWS.
+26. Explain AWS Eventbridge.
+27. Explain types of encryptions used in AWS cloud
+28. Explain lifecycle in AWS S3
+29. Explain encryptions of AWS S3
+30. Explain how do you connect EC2 to S3
+31. Explain SNS and SQS in AWS 
+32. Explain VPN in AWS with a practical use case.
+33. Explain diffrence difference between ec2 auto scaling and aws autoscaling
+34. Explain difference between launch configuration and launch template
+35. Explain when do you choose s3 and when do you choose cloudfront
+36. Is vertical scaling possible in Lambda , if it possible then give an example use case.
+37. Explain AWS CDK
+38. Explain where do all the Networking resources in AWS fit in the OSI model
+39. Explain VPC Perring 
+
+
+
 Scenario-Based AWS Questions 
 1.	Unresponsive EC2 Instance: One of your EC2 instances has become unresponsive. Describe how you would troubleshoot and resolve this issue.
 2.	Data Storage Strategy: You need to store large amounts of data and access it infrequently. Explain how you would use AWS storage options to design a cost-effective solution.
@@ -30,3 +47,7 @@ Scenario-Based AWS Questions
 4.	Unexpectedly High S3 Costs: You notice that the S3 storage costs have spiked. Explain how you would investigate and reduce these costs.
 5.	Cross-Region Failover: How would you architect an AWS application for failover between regions to ensure minimal downtime during regional outages?
 6.  A Company is trying to upload large amount of data in S3 bucket what can be steps taken to optimze the upload
+7.  Your have applications , it processes messages and you are using ec2 for it (we can use queues for it) 
+    you only have access to the dev environment as devops engineer we want you to create a ASG and how will you test it ,
+    how will be producer and consumer ?
+8. How do you host a static website on AWS?
