@@ -14,9 +14,10 @@
 14.	 How would you create a pull request (PR), and what is the PR review process?
 15.	 Explain GitHub Actions and their use in CI/CD.
 16.  Explain Runners.
-17.  What is SVN and difference between Git and SVN.
+17.  Explain SVN and difference between Git and SVN.
 18.  Explain Git fork.
 19.  Explain the difference between git fetch and git pull
+20.  Explain Git upstream 
 
 Scenario-Based Cloud Questions (5)
 1.	Branching and Merging: A team member mistakenly made changes on the main branch that should have been on a feature branch. How would you correct this without losing any work?
