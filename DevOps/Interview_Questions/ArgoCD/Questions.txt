@@ -1,0 +1,7 @@
+1) Explain ArgoCD (With Architecture)
+2) Explain Applications in ArgoCD
+3) Explain Projects in ArgoCD
+4) Explain Sync Ploicies in ArgoCD
+5) Explain Application Sets in ArgoCD
+6) Explain Rollback and History in ArgoCD
+7) Explain ArgoCD vs Jenkins (for CD)
