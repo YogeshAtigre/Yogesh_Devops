@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-helm
+  namespace: argocd
+spec:
+  source:
+    repoURL: "https://github.com/mabusaa/argocd-example-apps.git"
+    path: helm-guestbook
+    targetRevision: master
+    helm:
+      releaseName: yogesh-helm-release
+  project: default
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: guestbook-helm-app
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
